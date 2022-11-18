@@ -22,8 +22,5 @@
 
 --select * from Events
 
---select * from Events
-
---drop table Favorites;
 --select * from Favorites
 
