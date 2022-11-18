@@ -9,6 +9,7 @@
 --);
 
 --create table Favorites(
+--id int primary key identity (1,1),
 --EventsID int foreign key references Events(id)
 --);
 
@@ -20,3 +21,9 @@
 --('Existential End Excursion', '2023/05/21 00:05:21', 'A Cornfield', 'Reflect on the end and prepare for the worst. Snacks will be provided.');
 
 --select * from Events
+
+--select * from Events
+
+--drop table Favorites;
+--select * from Favorites
+
