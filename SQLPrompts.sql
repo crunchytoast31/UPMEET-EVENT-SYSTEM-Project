@@ -3,7 +3,7 @@
 --create table Events(
 --id int primary key identity (1,1),
 --[Name] nvarchar(50),
---[Date/Time] datetime,
+--DateTime datetime,
 --[Location] nvarchar(50),
 --[Description] nvarchar(350)
 --);
