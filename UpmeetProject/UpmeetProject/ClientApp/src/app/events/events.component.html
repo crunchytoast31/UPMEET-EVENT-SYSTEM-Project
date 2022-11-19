@@ -1,0 +1,5 @@
+<p>events works!</p>
+
+<div *ngFor="let e of currentList">
+<a [routerLink]="['../events', e.id]">{{e.name}}</a>
+</div>
