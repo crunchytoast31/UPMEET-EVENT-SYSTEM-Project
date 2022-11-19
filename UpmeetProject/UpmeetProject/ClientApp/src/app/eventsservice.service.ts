@@ -1,7 +1,6 @@
 import { Inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Event } from '@angular/router';
 import { iEvents } from 'src/events';
 
 @Injectable({
@@ -14,6 +13,10 @@ export class EventsserviceService {
 	}
 
 	GetEventsList(): Observable<iEvents[]> {
+		return this.http.get<iEvents[]>(this.baseUrl + 'api/Events');
+	}
+
+	ShowMoreInfo(): Observable<iEvents[]> {
 		return this.http.get<iEvents[]>(this.baseUrl + 'api/Events');
 	}
 }
