@@ -6,4 +6,5 @@ export interface iEvents {
 	dateTime: string;
 	location: string;
 	description: string;
+	isReadMore: boolean;
 }
