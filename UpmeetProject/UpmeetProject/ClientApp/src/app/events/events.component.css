@@ -1,0 +1,4 @@
+.limitTextHeight {
+	height: 1px;
+	overflow: hidden;
+}

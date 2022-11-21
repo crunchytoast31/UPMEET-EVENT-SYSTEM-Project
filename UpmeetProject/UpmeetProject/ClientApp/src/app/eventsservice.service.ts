@@ -15,8 +15,4 @@ export class EventsserviceService {
 	GetEventsList(): Observable<iEvents[]> {
 		return this.http.get<iEvents[]>(this.baseUrl + 'api/Events');
 	}
-
-	ShowMoreInfo(): Observable<iEvents[]> {
-		return this.http.get<iEvents[]>(this.baseUrl + 'api/Events');
-	}
 }
