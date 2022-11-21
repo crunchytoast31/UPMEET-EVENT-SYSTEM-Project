@@ -1,4 +1,17 @@
 
-<div *ngFor="let e of currentList">
-<a [routerLink]="['./src/events', e.id]">{{e.name}}</a>
-<div>
+<div *ngFor="let e of currentList; index as i">
+    <p [routerLink]="['./src/events', e.id]">{{e.name}}
+        <button type="button" (click)="showText(i)" id="{{i}}">
+            {{ !currentList[i].isReadMore ? 'Read More': 'Read Less' }}
+          </button>
+    </p>
+    <div [ngClass]="{'limitTextHeight': !currentList[i].isReadMore}">
+    {{e.dateTime}} <br>
+    {{e.location}} <br>
+    {{e.description}} <br>
+    
+    </div>
+    </div>
+    
+    
+    

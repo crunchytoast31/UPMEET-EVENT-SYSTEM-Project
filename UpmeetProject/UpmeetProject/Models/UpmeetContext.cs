@@ -21,13 +21,13 @@ public partial class UpmeetContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=.\\SQLExpress;Database=Upmeet;Trusted_Connection=True;TrustServerCertificate=True");
+        => optionsBuilder.UseSqlServer("Server=DESKTOP-T5NUDUR\\ABBY_SQLEXPRESS;Database=Upmeet;Trusted_Connection=True;TrustServerCertificate=True");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Event>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Events__3213E83F1B70D07E");
+            entity.HasKey(e => e.Id).HasName("PK__Events__3213E83F6EAD02FB");
 
             entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.DateTime).HasColumnType("datetime");
@@ -38,14 +38,14 @@ public partial class UpmeetContext : DbContext
 
         modelBuilder.Entity<Favorite>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Favorite__3213E83F5A0F7672");
+            entity.HasKey(e => e.Id).HasName("PK__Favorite__3213E83FA911FF6B");
 
             entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.EventsId).HasColumnName("EventsID");
 
             entity.HasOne(d => d.Events).WithMany(p => p.Favorites)
                 .HasForeignKey(d => d.EventsId)
-                .HasConstraintName("FK__Favorites__Event__3A81B327");
+                .HasConstraintName("FK__Favorites__Event__534D60F1");
         });
 
         OnModelCreatingPartial(modelBuilder);
