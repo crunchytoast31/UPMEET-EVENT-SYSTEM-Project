@@ -19,7 +19,8 @@ import { FavoritesComponent } from './favorites/favorites.component';
 		HomeComponent,
 		CounterComponent,
 		FetchDataComponent,
-		EventsComponent
+		EventsComponent,
+		FavoritesComponent
 	],
 	imports: [
 		BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
