@@ -4,6 +4,7 @@ import { Event } from '@angular/router';
 import { RouterLink } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { iEvents } from 'src/events';
+import { AddtaskComponent } from '../addtask/addtask.component';
 
 @Component({
 	selector: 'app-events',

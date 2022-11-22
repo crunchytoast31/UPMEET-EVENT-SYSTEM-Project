@@ -1,0 +1,11 @@
+<h2>Add Your Own Event!!</h2>
+<p>New Event Name</p>
+<input type = "text" [(ngModel)]="name"/>
+<p>New Event Date</p>
+<input type = "dateTime" [(ngModel)]="dateTime"/>
+<p>New Event Location</p>
+<input type = "text" [(ngModel)]="location"/>
+<p>New Event Description</p>
+<input type = "text" [(ngModel)]="description"/>
+
+<button (click)="addEvent()">Add Event</button>

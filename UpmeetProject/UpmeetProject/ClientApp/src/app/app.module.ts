@@ -11,6 +11,7 @@ import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { EventsComponent } from './events/events.component';
 import { FavoritesComponent } from './favorites/favorites.component';
+import { AddtaskComponent } from './addtask/addtask.component';
 
 @NgModule({
 	declarations: [
@@ -19,7 +20,8 @@ import { FavoritesComponent } from './favorites/favorites.component';
 		HomeComponent,
 		CounterComponent,
 		FetchDataComponent,
-		EventsComponent
+		EventsComponent,
+		AddtaskComponent
 	],
 	imports: [
 		BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -30,7 +32,8 @@ import { FavoritesComponent } from './favorites/favorites.component';
 			{ path: 'counter', component: CounterComponent },
 			{ path: 'fetch-data', component: FetchDataComponent },
 			{ path: 'events', component: EventsComponent },
-			{ path: 'favorites', component: FavoritesComponent }
+			{ path: 'favorites', component: FavoritesComponent },
+			{ path: 'addtask', component: AddtaskComponent }
 		])
 	],
 	providers: [],
