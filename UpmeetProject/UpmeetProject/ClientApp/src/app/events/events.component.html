@@ -1,16 +1,17 @@
 
 <div *ngFor="let e of currentList; index as i">
-<p [routerLink]="['./src/events', e.id]">{{e.name}}
+<h5 [routerLink]="['./src/events', e.id]">{{e.name}}
     <button type="button" (click)="showText(i)" id="{{i}}">
         {{ !currentList[i].isReadMore ? 'Read More': 'Read Less' }}
       </button>
+    </h5>
+<div [ngClass]="{'limitTextHeight': !currentList[i].isReadMore}"><p>
+ Time:{{e.dateTime}} <br>
+ Place: {{e.location}} <br>
+ Summary: {{e.description}} <br>
 </p>
-<div [ngClass]="{'limitTextHeight': !currentList[i].isReadMore}">
-{{e.dateTime}} <br>
-{{e.location}} <br>
-{{e.description}} <br>
-
 </div>
+<br>
 </div>
 
 
