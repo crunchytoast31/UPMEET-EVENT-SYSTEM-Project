@@ -129,5 +129,8 @@
       }
     }
   },
-  "defaultProject": "UpmeetProject"
+  "defaultProject": "UpmeetProject",
+  "cli": {
+    "analytics": false
+  }
 }
