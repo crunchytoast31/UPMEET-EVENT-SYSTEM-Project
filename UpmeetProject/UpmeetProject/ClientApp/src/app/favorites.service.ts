@@ -21,5 +21,9 @@ export class FavoritesService {
 	GetFavoriteEvents(): Observable<ViewFavorite[]>{
 		return this.http.get<ViewFavorite[]>(this.baseUrl+'api/Favorites/GetFavoritedEvents')
 	}
+
+	RemoveFavoriteEvent(FavoritesId:number): Observable<Favorites[]>{
+		return this.http.delete<Favorites[]>(this.baseUrl+'api/Favorites/'+FavoritesId)		
+	}
 	
 }

@@ -1,5 +1,5 @@
 export interface ViewFavorite {
-    Id : number;
+    id : number;
     eventsId : number;
 	name: string;
 	dateTime: string;

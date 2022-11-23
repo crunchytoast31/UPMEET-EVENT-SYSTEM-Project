@@ -19,18 +19,20 @@ export class FavoritesComponent implements OnInit {
 		this.favoritesdb.GetFavoriteEvents().subscribe((result:ViewFavorite[]) =>
 		{
 			this.favorites = result;
-			console.log(result);
+			console.log(this.favorites);
 		});
 		
 	}
 
-	// AddFavoriteEvent(eventId : number) : void{
-	// 	this.eventsDB.AddToFavorites(eventId).subscribe((result) => 
-	// 	{this.favorites.push(result)});
-	// }
-	
-
-
-	RemoveFavoriteEvent(eventId: number) {
+	RemoveFavoriteEvent(id:number, index:number) : void {
+		console.log(id);
+		this.favoritesdb.RemoveFavoriteEvent(id).subscribe((result)=>
+		{
+			
+			this.favorites.splice(index,1);
+		})
 	}
+
+
+
 }

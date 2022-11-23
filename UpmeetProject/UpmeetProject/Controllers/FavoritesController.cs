@@ -27,15 +27,17 @@ namespace UpmeetProject.Controllers
             List<ViewFavorite> viewfavorite = new List<ViewFavorite>(); 
             foreach(Favorite favorite in Myfavs)
             {
+
                 ViewFavorite view = new ViewFavorite();
                 view.Id = favorite.Id;
                 view.EventsId = favorite.EventsId;
-                Event even = _context.Events.First(e => e.Id ==favorite.EventsId);
+                Event even = _context.Events.First(e => e.Id == favorite.EventsId);
                 view.Name = even.Name;
                 view.DateTime = even.DateTime;
                 view.Description = even.Description;
                 view.Location = even.Location;
                 viewfavorite.Add(view);
+                
             }
             return viewfavorite;
         }

@@ -1,4 +1,4 @@
 export interface Favorites {
-    Id : number;
+    id : number;
     eventsId : number;
 }

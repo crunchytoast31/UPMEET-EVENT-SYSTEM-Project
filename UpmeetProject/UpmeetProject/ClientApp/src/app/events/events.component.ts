@@ -31,4 +31,5 @@ export class EventsComponent implements OnInit {
 		this.currentList[id].isReadMore = !this.currentList[id].isReadMore;
 	}
 	ngOnInit(): void {}
+
 }
