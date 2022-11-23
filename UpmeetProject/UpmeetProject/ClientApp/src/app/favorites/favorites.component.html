@@ -1,1 +1,18 @@
-<p>favorites works!</p>
+
+<h2>Favorites!</h2>
+
+<div *ngFor="let fav of favorites; index as i">
+<h5>{{fav.name}}</h5>
+<p>{{fav.description}}</p>
+<p>{{fav.dateTime}}</p>
+<p>{{fav.location}}</p>
+</div>
+
+
+
+
+ <!-- <div *ngFor="let a of currentList; index as p">
+    <div *ngIf="a.id === favorites[p].eventsId">
+        <p>{{a.name}}</p>
+    </div>
+ </div> -->

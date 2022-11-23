@@ -1,10 +1,12 @@
 
 <div *ngFor="let e of currentList; index as i">
-<h5 [routerLink]="['./src/events', e.id]">{{e.name}}
+<!-- <a [routerLink]="['/events', e.id]">{{e.name}} -->
+  <h5>{{e.name}}</h5>
     <button type="button" (click)="showText(i)" id="{{i}}">
         {{ !currentList[i].isReadMore ? 'Read More': 'Read Less' }}
       </button>
-    </h5>
+      <button type ="button" style="float: right;" (click)="AddFavoriteEvent(e.id)" id="{{i}}">{{ !currentList[i].isFavorite ? 'Favorite': 'Unfavorite' }} this event!</button>
+    <!-- </a> -->
 <div [ngClass]="{'limitTextHeight': !currentList[i].isReadMore}"><p>
  Time:{{e.dateTime}} <br>
  Place: {{e.location}} <br>
@@ -14,4 +16,10 @@
 <br>
 </div>
 
+<!-- <div *ngFor="let a of currentList; index as p">
+  <div *ngIf="a.id === favorites[p].eventsId">
+    <p>{{a.name}}</p>
+  </div>
+</div> -->
 
+<!-- <app-favorites></app-favorites> -->
