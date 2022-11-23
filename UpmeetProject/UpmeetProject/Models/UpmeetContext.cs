@@ -1,4 +1,4 @@
-﻿    using System;
+﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
@@ -27,7 +27,7 @@ public partial class UpmeetContext : DbContext
     {
         modelBuilder.Entity<Event>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Events__3213E83F59F82E67");
+            entity.HasKey(e => e.Id).HasName("PK__Events__3213E83FCA4DF433");
 
             entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.DateTime).HasColumnType("datetime");
@@ -38,7 +38,7 @@ public partial class UpmeetContext : DbContext
 
         modelBuilder.Entity<Favorite>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Favorite__3213E83FDD1EA6DA");
+            entity.HasKey(e => e.Id).HasName("PK__Favorite__3213E83F7B313522");
 
             entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.EventsId).HasColumnName("EventsID");
