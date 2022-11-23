@@ -18,7 +18,7 @@ export class EventsserviceService {
 	}
 
 	AddToFavorites(id : number) : Observable<Favorites>{
-		let favorite : Favorites = {eventId : id};
+		let favorite : Favorites = {eventsId : id, Id: 0};
 		return this.http.post<Favorites>(this.baseUrl + 'api/Favorites', favorite);
 	}
 }

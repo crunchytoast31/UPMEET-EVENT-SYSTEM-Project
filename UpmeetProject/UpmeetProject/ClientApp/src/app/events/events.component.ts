@@ -4,6 +4,7 @@ import { Event } from '@angular/router';
 import { RouterLink } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { iEvents } from 'src/events';
+import { Favorites } from 'src/favorites';
 
 @Component({
 	selector: 'app-events',
@@ -17,6 +18,13 @@ export class EventsComponent implements OnInit {
 			this.currentList = results;
 			console.log(this.currentList);
 		});
+	}
+	
+	favorites : Favorites[] = [];
+
+	AddFavoriteEvent(eventId : number) : void{
+		this.eventsDB.AddToFavorites(eventId).subscribe((result) => 
+		{this.favorites.push(result)});
 	}
 
 	showText(id: number) {

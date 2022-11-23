@@ -6,9 +6,7 @@ const target = env.ASPNETCORE_HTTPS_PORT
 
 const PROXY_CONFIG = [
 	{
-		context: [ '/api/Events', 
-					"api/Favorites"
-				],
+		context: [ '/api/Events','/api/Favorites' ],
 		target: target,
 		secure: false,
 		headers: {

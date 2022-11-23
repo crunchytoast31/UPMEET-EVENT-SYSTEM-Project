@@ -5,7 +5,7 @@ namespace UpmeetProject.Models;
 
 public partial class Favorite
 {
-    public int Id { get; set; }
+    public int? Id { get; set; }
 
     public int? EventsId { get; set; }
 

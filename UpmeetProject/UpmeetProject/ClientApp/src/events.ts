@@ -7,4 +7,5 @@ export interface iEvents {
 	location: string;
 	description: string;
 	isReadMore: boolean;
+	isFavorite: boolean;
 }
