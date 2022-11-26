@@ -4,8 +4,6 @@
 <div *ngFor="let fav of favorites; index as i">
 
 <h5>{{fav.name}}</h5><button type ="button" style="float: right;" (click)="RemoveFavoriteEvent(fav.id,i)" id="{{i}}">Unfavorite this event!</button>
-<p>{{i}}</p>
-<p>{{fav.id}}</p>
 <p>{{fav.description}}</p>
 <p>{{fav.dateTime}}</p>
 <p>{{fav.location}}</p>
